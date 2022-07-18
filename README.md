@@ -1,4 +1,4 @@
-### Interface
+### 1. Interface
 
 Component DEMO:
 
@@ -12,9 +12,9 @@ I am assuming the user already has an account logged in, so they won't be redire
 
 Idea for layout: https://github.com/Riuqlav/ws-invicara/blob/b7f8674c31cd92ef14adcc6f8cbed7b43da5a838/src/img/layoutAdm.png
 
-### 1. What REST endpoint Method and URI would you put in place to get a Workstation schedule? Include any query params or request body
+### 2. Please write a React componentfor a workstation.
 
-I would use the `GET` method, to retrieve the info based on the unique id of each workstation.
+Component DEMO:
 
 ### 3. Current reserved status is displayed with either a green dot (currently unreserved) or a red dot.
 
@@ -49,7 +49,11 @@ I would use the `GET` method, to retrieve the info based on the unique id of eac
 }
 ```
 
-### 4. What REST endpoint Method and URI would you put in place to reserve a Workstation for a specific user? Include any query params or request body data you think it might need.
+### 4. What REST endpoint Method and URI would you put in place to get a Workstation schedule? Include any query params or request body
+
+I would use the `GET` method, to retrieve the info based on the unique id of each workstation.
+
+### 5. What REST endpoint Method and URI would you put in place to reserve a Workstation for a specific user? Include any query params or request body data you think it might need.
 
 I would use the `POST` request to create a new session.
 
