@@ -1,0 +1,28 @@
+.dotAvailable {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(102, 255, 0);
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px black;
+}
+
+.dotUnavailable {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px black;
+}
+
+.dotMiddle {
+  width: 8px;
+  height: 8px;
+  position: relative;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+}

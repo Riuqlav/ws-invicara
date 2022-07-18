@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+### Interface
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I am assuming the user already has an account logged in, so they won't be redirected to a login or register page.
 
-## Available Scripts
+- The main layout should display Working Stations, in a card or list fashion.
 
-In the project directory, you can run:
+- Each card of the list item indicates the public User Name, Desk Reference, Time Left, and a button to book.
 
-### `npm start`
+- Book button should open a date/time picker(from MUI for example) I am assuming the rules for the date/time picker (min and max) are already associated with each user profile.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. What REST endpoint Method and URI would you put in place to get a Workstation schedule? Include any query params or request body
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+I would use the `GET` method, to retrieve the info based on the unique id of each workstation.
 
-### `npm test`
+### 3. Current reserved status is displayed with either a green dot (currently unreserved) or a red dot.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+.dotAvailable {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(102, 255, 0);
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px black;
+}
 
-### `npm run build`
+.dotUnavailable {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px black;
+}
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+.dotMiddle {
+  width: 8px;
+  height: 8px;
+  position: relative;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+}
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 4. What REST endpoint Method and URI would you put in place to reserve a Workstation for a specific user? Include any query params or request body data you think it might need.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I would use the `POST` request to create a new session.
 
-### `npm run eject`
+```
+{
+  body {
+  workStationId: string,
+  userEmail: string,
+  booked_at: Date,
+  booked_till: Date current_reserved_status: boolean
+  }
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+But it would depend on how the backend is setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 5.What might be the different types of data you would need to store and access for this app?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+I'll need more clarification for the question, but if caught on the spot I suppose you are asking what needs to persist in the cache and what should be in the database.
+In this case, I'd only leave in cache user login data, the rest will be in the database, I see no reason for other data for this component to persist.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 6. What questions would you ask the PM providing these requirements?
 
-## Learn More
+Besides all the info given, questions I'd have are:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- How many machines?
+- Opening hours?
+- How many people are expected?
+- Are the rules of time and date a must?
+- How often do workstations need to stop for maintenance or cleaning? (to implement availability).
