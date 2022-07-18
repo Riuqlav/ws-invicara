@@ -12,7 +12,7 @@ I am assuming the user already has an account logged in, so they won't be redire
 
 Idea for layout: ![main UI](https://github.com/Riuqlav/ws-invicara/blob/b7f8674c31cd92ef14adcc6f8cbed7b43da5a838/src/img/layoutAdm.png)
 
-### 2. Please write a React componentfor a workstation.
+### 2. Please write a React component for a workstation.
 
 Component DEMO: https://riuqlav.github.io/ws-invicara/
 
