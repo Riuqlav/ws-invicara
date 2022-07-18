@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ws-invicara/static/css/main.43b640c2.css",
+    "main.js": "/ws-invicara/static/js/main.d389819a.js",
+    "index.html": "/ws-invicara/index.html",
+    "main.43b640c2.css.map": "/ws-invicara/static/css/main.43b640c2.css.map",
+    "main.d389819a.js.map": "/ws-invicara/static/js/main.d389819a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43b640c2.css",
+    "static/js/main.d389819a.js"
+  ]
+}
