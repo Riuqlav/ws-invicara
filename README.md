@@ -61,7 +61,7 @@ I would use the `POST` request to create a new session.
 
 But it would depend on how the backend is setup
 
-### 5.What might be the different types of data you would need to store and access for this app?
+### 5. What might be the different types of data you would need to store and access for this app?
 
 I'll need more clarification for the question, but if caught on the spot I suppose you are asking what needs to persist in the cache and what should be in the database.
 In this case, I'd only leave in cache user login data, the rest will be in the database, I see no reason for other data for this component to persist.
