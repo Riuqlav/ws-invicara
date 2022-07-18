@@ -42,7 +42,7 @@ const DisplayWorkstations = () => {
           <tbody>
             {workstations.map((workstation) => (
               <tr>
-                <td>
+                <td key={workstation.id}>
                   {workstation.currentReservedStatus ? (
                     <span className="dotAvailable">
                       <div
@@ -58,14 +58,14 @@ const DisplayWorkstations = () => {
                   )}
                 </td>
                 {/* I am assuming some auth would be required for this tool, which would show the users name. */}
-                <td>
+                <td >
                   {workstation.currentReservedStatus
                     ? "Desk Available"
                     : workstation.user}
                 </td>
-                <td>{workstation.deskNumber}</td>
-                <td>{workstation.bookedTime}</td>
-                <td>
+                <td >{workstation.deskNumber}</td>
+                <td >{workstation.bookedTime}</td>
+                <td >
                   {workstation.currentReservedStatus ? (
                     <Button
                       color="primary"

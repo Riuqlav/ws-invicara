@@ -1,5 +1,7 @@
 ### Interface
 
+Component DEMO:
+
 I am assuming the user already has an account logged in, so they won't be redirected to a login or register page.
 
 - The main layout should display Working Stations, in a card or list fashion.
@@ -7,6 +9,8 @@ I am assuming the user already has an account logged in, so they won't be redire
 - Each card of the list item indicates the public User Name, Desk Reference, Time Left, and a button to book.
 
 - Book button should open a date/time picker(from MUI for example) I am assuming the rules for the date/time picker (min and max) are already associated with each user profile.
+
+Idea for layout: https://github.com/Riuqlav/ws-invicara/blob/b7f8674c31cd92ef14adcc6f8cbed7b43da5a838/src/img/layoutAdm.png
 
 ### 1. What REST endpoint Method and URI would you put in place to get a Workstation schedule? Include any query params or request body
 
