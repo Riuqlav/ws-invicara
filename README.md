@@ -1,6 +1,6 @@
 ### 1. Interface
 
-Component DEMO:
+Component DEMO: https://riuqlav.github.io/ws-invicara/
 
 I am assuming the user already has an account logged in, so they won't be redirected to a login or register page.
 
@@ -14,7 +14,7 @@ Idea for layout: https://github.com/Riuqlav/ws-invicara/blob/b7f8674c31cd92ef14a
 
 ### 2. Please write a React componentfor a workstation.
 
-Component DEMO:
+Component DEMO: https://riuqlav.github.io/ws-invicara/
 
 ### 3. Current reserved status is displayed with either a green dot (currently unreserved) or a red dot.
 
