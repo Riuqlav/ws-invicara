@@ -10,7 +10,7 @@ I am assuming the user already has an account logged in, so they won't be redire
 
 - Book button should open a date/time picker(from MUI for example) I am assuming the rules for the date/time picker (min and max) are already associated with each user profile.
 
-Idea for layout: ![main UI](https://github.com/Riuqlav/ws-invicara/blob/b7f8674c31cd92ef14adcc6f8cbed7b43da5a838/src/img/layoutAdm.png)
+Idea for User Adm. layout: ![main UI](https://github.com/Riuqlav/ws-invicara/blob/b7f8674c31cd92ef14adcc6f8cbed7b43da5a838/src/img/layoutAdm.png)
 
 ### 2. Please write a React component for a workstation.
 
