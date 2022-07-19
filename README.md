@@ -80,6 +80,7 @@ Besides all the info given, questions I'd have are:
 
 - How many machines?
 - Opening hours?
+- What would be the steps and UI to unbook?
 - How many people are expected?
 - Are the rules of time and date a must?
 - How often do workstations need to stop for maintenance or cleaning? (to implement availability).
